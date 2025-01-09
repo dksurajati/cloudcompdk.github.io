@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Checker</title>
+</head>
+<body>
+  <h1>Mood Checker</h1>
+  <p>Bagaimana perasaan Anda hari ini?</p>
+
+  <div class="mood-container">
+    <button onclick="checkMood('happy')">😊 Senang</button>
+    <button onclick="checkMood('sad')">😔 Sedih</button>
+    <button onclick="checkMood('angry')">😡 Marah</button>
+    <button onclick="checkMood('neutral')">😐 Biasa Saja</button>
+  </div>
+
+  <p id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></p>
+
+  <script>
+    function checkMood(mood) {
+      let message = '';
+      if (mood === 'happy') {
+        message = 'Senang mendengar Anda merasa senang! 😊';
+      } else if (mood === 'sad') {
+        message = 'Semoga hari Anda segera membaik. 💙';
+      } else if (mood === 'angry') {
+        message = 'Cobalah untuk tenang dan rileks. 🌿';
+      } else if (mood === 'neutral') {
+        message = 'Semoga hari Anda tetap menyenangkan! 😌';
+      }
+      document.getElementById('result').innerText = message;
+    }
+  </script>
+</body>
+</html>

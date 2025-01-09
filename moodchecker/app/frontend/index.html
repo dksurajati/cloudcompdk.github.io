@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mood Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Your Mood Tracker</h1>
+    </header>
+    <main>
+        <div id="tracker">
+            <div id="mood-options">
+                <button class="mood" data-mood="😊" onclick="selectMood(this)">😊</button>
+                <button class="mood" data-mood="😢" onclick="selectMood(this)">😢</button>
+                <button class="mood" data-mood="😡" onclick="selectMood(this)">😡</button>
+                <button class="mood" data-mood="😎" onclick="selectMood(this)">😎</button>
+            </div>
+            <textarea id="mood-input" placeholder="Tulis sesuatu tentang mood Anda..."></textarea>
+            <button id="save-button" onclick="saveMood()">Simpan Mood</button>
+        </div>
+        <ul id="mood-history"></ul>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
